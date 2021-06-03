@@ -3,5 +3,7 @@
 }
 
 @media (max-width: $width-only-tablet) {
-  background-color: transparent;
+  .header-wrapper {
+    background-color: transparent;
+  }
 }

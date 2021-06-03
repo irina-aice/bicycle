@@ -1,3 +1,7 @@
+.header {
+  @include container;
+}
+
 @media (max-width: $width-only-tablet) {
   .header {
     background-color: $pale-black;

@@ -1,3 +1,14 @@
+.information__inner {
+  width: 100%;
+  min-height: 763px;
+  max-width: 874px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 160px;
+  padding-top: 260px;
+}
+
 .information__about h1 {
   margin: 0;
   font-size: 46px;
@@ -21,7 +32,7 @@
 }
 
 .information__about p {
-  margin: 0;
+  margin: 24px 0 0 0;
   font-size: 20px;
   color: $darker-white;
 }
@@ -32,8 +43,13 @@
   }
 }
 
+.information__form {
+  max-width: 327px;
+}
+
 .information__form p {
-  margin: 0;
+  margin: 0 0 20px 0;
+  text-align: center;
   font-size: 17px;
   line-height: 28px;
   font-weight: 600;

@@ -1,7 +1,29 @@
 .nav ul {
   @include reset-list;
+  max-width: 874px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $light-white;
+}
+
+@media (max-width: $width-only-tablet) {
+  .nav ul {
+    flex-direction: column;
+  }
+}
+
+.nav li {
+  padding-bottom: 10px;
 }
 
 .nav a {
   color: $dark-white;
+  padding-bottom: 10px;
+}
+
+.nav button {
+  display: none;
 }

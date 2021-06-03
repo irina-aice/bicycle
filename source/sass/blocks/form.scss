@@ -2,6 +2,16 @@
   @include reset-list;
 }
 
+.form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  border: 1px solid $lighter-white;
+  border-radius: 6px;
+}
+
 .form input::placeholder {
   font-size: 15px;
   line-height: 24px;
@@ -10,8 +20,14 @@
 }
 
 .form button {
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 13px;
   font-size: 15px;
   line-height: 21px;
   font-weight: 600;
   letter-spacing: normal;
+  border: 0;
+  border-radius: 6px;
+  background-color: $green;
 }
