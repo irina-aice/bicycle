@@ -1,0 +1,7 @@
+.nav ul {
+  @include reset-list;
+}
+
+.nav a {
+  color: $dark-white;
+}

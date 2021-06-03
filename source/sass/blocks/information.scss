@@ -1,0 +1,49 @@
+.information__about h1 {
+  margin: 0;
+  font-size: 46px;
+  line-height: 64px;
+  font-weight: 700;
+  color: $white;
+}
+
+@media (max-width: $width-only-tablet) {
+  .information__about h1 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .information__about h1 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.information__about p {
+  margin: 0;
+  font-size: 20px;
+  color: $darker-white;
+}
+
+@media (max-width: $width-only-tablet) {
+  .information__about p {
+    font-size: 18px;
+  }
+}
+
+.information__form p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 600;
+  color: $white;
+}
+
+@media (max-width: $width-only-tablet) {
+  .information__form p {
+    font-size: 18px;
+    color: $black;
+  }
+}
+

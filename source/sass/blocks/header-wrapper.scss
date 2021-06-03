@@ -1,0 +1,7 @@
+.header-wrapper {
+  background-color: $pale-black;
+}
+
+@media (max-width: $width-only-tablet) {
+  background-color: transparent;
+}

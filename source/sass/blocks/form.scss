@@ -1,0 +1,17 @@
+.form ul {
+  @include reset-list;
+}
+
+.form input::placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $grey;
+}
+
+.form button {
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 600;
+  letter-spacing: normal;
+}

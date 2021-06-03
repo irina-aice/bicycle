@@ -1,0 +1,23 @@
+.video {
+  background: linear-gradient(to bottom, $pale-black, $pale-black 90%, $white 90%, $white);
+}
+
+.video h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color: $white;
+}
+
+@media (max-width: $width-only-tablet) {
+  .video h2 {
+    font-size: 24px;
+  }
+}
+
+.video p {
+  margin: 0;
+  line-height: 28px;
+  color: $dark-white;
+}
