@@ -1,10 +1,18 @@
 .header-wrapper {
   background-color: $pale-black;
+  /*background-image: url("../img/main-bike-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-bike-desktop@2x.jpg");
+  }*/
 }
 
 @media (max-width: $width-only-tablet) {
   .header-wrapper {
-    position: relative;
+    //position: relative;
     background-color: transparent;
+    //background-image: none;
   }
 }

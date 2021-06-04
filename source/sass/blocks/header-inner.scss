@@ -1,0 +1,20 @@
+.header-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  min-height: 825px;
+  background-image: url("../img/main-bike-desktop.jpg");
+  background-repeat: no-repeat;
+  //background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-bike-desktop@2x.jpg");
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .header-inner {
+    position: relative;
+    min-height: auto;
+    background-image: none;
+  }
+}

@@ -3,8 +3,22 @@
   margin: 0 auto;
 }
 
+@media (max-width: $width-only-tablet) {
+  .about {
+    padding-left: 106px;
+    padding-right: 106px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .about {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .about h2 {
-  margin: 0;
+  margin: 70px 0 0 0;
   text-align: center;
   font-size: 30px;
   line-height: 1;
@@ -29,8 +43,17 @@
   letter-spacing: -0.5px;
 }
 
+@media (max-width: $width-only-tablet) {
+  .about ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+}
+
 @media (max-width: $width-only-mobile) {
   .about ul {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
     font-size: 18px;
   }
 }
