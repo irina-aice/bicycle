@@ -1,9 +1,13 @@
-.header {
-  @include container;
-}
-
 @media (max-width: $width-only-tablet) {
   .header {
-    background-color: $pale-black;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .no-js .header {
+    position: static;
   }
 }
