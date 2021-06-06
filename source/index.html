@@ -87,29 +87,61 @@
       </ul>
     </section>
     <section class="type" id="product-type">
-      <h2>Виды велосипедов</h2>
-      <ul>
-        <li>
-          <img src="">
-          <span>Дорожный велосипед</span>
-        </li>
-        <li>
-          <img src="">
-          <span>Горный велосипед</span>
-        </li>
-        <li>
-          <img src="">
-          <span>Детский велосипед</span>
-        </li>
-      </ul>
+      <div class="type__wrapper">
+        <div class="type__inner">
+          <h2>Виды велосипедов</h2>
+          <ul>
+            <li>
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/road-bike-tablet.webp, img/road-bike-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/road-bike-desktop.webp, img/road-bike-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/road-bike-tablet.jpg, img/road-bike-tablet@2x.jpg 2x">
+                <img src="img/road-bike-desktop.jpg" srcset="img/road-bike-desktop@2x.jpg" alt="Велосипед с корзиной у стены с вьюнком">
+              </picture>
+              <span>Дорожный велосипед</span>
+            </li>
+            <li>
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountain-bike-tablet.webp, img/mountain-bike-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/mountain-bike-desktop.webp, img/mountain-bike-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/mountain-bike-tablet.jpg, img/mountain-bike-tablet@2x.jpg 2x">
+                <img src="img/mountain-bike-desktop.jpg" srcset="img/mountain-bike-desktop@2x.jpg" alt="Велосипед с большим протектором на фоне гор">
+              </picture>
+              <span>Горный велосипед</span>
+            </li>
+            <li>
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/children-bike-tablet.webp, img/children-bike-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/children-bike-desktop.webp, img/children-bike-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/children-bike-tablet.jpg, img/children-bike-tablet@2x.jpg 2x">
+                <img src="img/children-bike-desktop.jpg" srcset="img/children-bike-desktop@2x.jpg" alt="Детский розовый велосипед на фоне стены">
+              </picture>
+              <span>Детский велосипед</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
     <section class="video" id="video">
-      <div>
-        <h2>Видео про велосипеды</h2>
-        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      <div class="video__inner">
+        <div>
+          <h2>Видео про велосипеды</h2>
+          <p>В этом видео мы подробно расскажем про <br>особенности выбора велосипеда для себя.</p>
+        </div>
+        <div class="video__item">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/video-bike-mobile.jpg">
+            <source media="(max-width: 1023px)" srcset="img/video-bike-tablet.jpg">
+            <img src="img/video-bike-desktop.jpg">
+          </picture>
+          <button type="button" aria-label="Смотреть">
+            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 65C50.4493 65 65 50.4493 65 32.5C65 14.5507 50.4493 0 32.5 0C14.5507 0 0 14.5507 0 32.5C0 50.4493 14.5507 65 32.5 65Z" fill="#0AD9C6"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6001 23.3999L41.6001 32.4999L28.6001 41.5999V23.3999Z" fill="#070707"/>
+            </svg>
+          </button>
+        </div>
       </div>
-      <img src="">
-      <button type="button"></button>
     </section>
     <footer class="footer" id="contacts">
       <div class="footer__inner">
