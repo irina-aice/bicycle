@@ -1,6 +1,7 @@
 .footer {
   max-width: 957px;
   margin: 0 auto;
+  padding-bottom: 98px;
 }
 
 @media (max-width: $width-only-mobile) {
@@ -37,6 +38,7 @@
   text-align: center;
   font-size: 17px;
   line-height: 31px;
+  font-weight: 400;
   letter-spacing: normal;
   color: $lighter-black;
 }
@@ -54,20 +56,22 @@
   }
 }
 
-.footer ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-@media (max-width: $width-only-mobile) {
-  .footer ul {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: $width-only-tablet) {
+  .footer br {
+    display: none;
   }
 }
 
 @media (max-width: $width-only-tablet) {
-  .footer br {
-    display: none;
+  .footer__map {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .footer__map {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

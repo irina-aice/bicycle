@@ -1,9 +1,10 @@
 .header-inner {
   margin: 0 auto;
+  max-width: 1440px;
   min-height: 825px;
   background-image: url("../img/main-bike-desktop.jpg");
   background-repeat: no-repeat;
-  //background-size: cover;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main-bike-desktop@2x.jpg");

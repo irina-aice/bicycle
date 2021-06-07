@@ -10,6 +10,35 @@
     document.documentElement.classList.remove('no-js');
     document.documentElement.classList.add('js');
   </script>
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/mobile.png");
+    }
+
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("img/tablet.png");
+      }
+    }
+
+    /* Десктоп */
+    @media ( min-width: 1440px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("img/desktop.png");
+      }
+    }
+  </style>
+  <link href="/node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="/node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
 <!-- page--nav-opened -->
 <body class="page">
@@ -40,7 +69,9 @@
       <section class="information">
         <div class="information__about">
           <a class="logo">
-            <svg width="10" height="10"></svg>
+            <svg width="68" height="21">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
           </a>
           <h1>Мы продаем велосипеды</h1>
           <p>Наш магазин отбирает только самые лучшие <br>велосипеды для продажи</p>
@@ -51,11 +82,11 @@
             <ul>
               <li>
                 <label class="visually-hidden" for="user-name">Имя</label>
-                <input type="text" name="name" id="user-name" placeholder="Введите Ваше Имя">
+                <input type="text" name="name" id="user-name" placeholder="Введите Ваше Имя" required>
               </li>
               <li>
                 <label class="visually-hidden" for="user-phone">Телефон</label>
-                <input type="tel" name="phone" id="user-phone" placeholder="Введите Ваш номер телефона">
+                <input type="tel" name="phone" id="user-phone" placeholder="Введите Ваш номер телефона" required>
               </li>
             </ul>
             <button type="submit">Подобрать велосипед мечты</button>
@@ -74,7 +105,7 @@
         </li>
         <li>
           <span>02</span>
-          <p>Доставка велосипедов по всей России!</p>
+          <p>Доставка велосипедов <br>по всей России!</p>
         </li>
         <li>
           <span>03</span>
@@ -126,37 +157,39 @@
       <div class="video__inner">
         <div>
           <h2>Видео про велосипеды</h2>
-          <p>В этом видео мы подробно расскажем про <br>особенности выбора велосипеда для себя.</p>
+          <p>В этом видео мы подробно расскажем про <br class="video__first-brake">особенности
+            <br class="video__second-brake">выбора велосипеда для себя.</p>
         </div>
         <div class="video__item">
           <picture>
             <source media="(max-width: 767px)" srcset="img/video-bike-mobile.jpg">
             <source media="(max-width: 1023px)" srcset="img/video-bike-tablet.jpg">
-            <img src="img/video-bike-desktop.jpg">
+            <img src="img/video-bike-desktop.jpg" width="929" height="522" alt="Спортивный черный велосипед на черном фоне">
           </picture>
           <button type="button" aria-label="Смотреть">
-            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 65C50.4493 65 65 50.4493 65 32.5C65 14.5507 50.4493 0 32.5 0C14.5507 0 0 14.5507 0 32.5C0 50.4493 14.5507 65 32.5 65Z" fill="#0AD9C6"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6001 23.3999L41.6001 32.4999L28.6001 41.5999V23.3999Z" fill="#070707"/>
+            <svg width="65" height="65">
+              <use xlink:href="img/sprite.svg#play"></use>
             </svg>
           </button>
         </div>
       </div>
     </section>
-    <footer class="footer" id="contacts">
-      <div class="footer__inner">
-        <h2>Как нас найти?</h2>
-        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая <br>Конюшенная, д. 19</p>
-      </div>
-      <div class="map"></div>
-      <div class="contacts">
-        <ul>
-          <li>puteshestviemechta@gmail.ru</li>
-          <li>+7 (499) -784-684-46</li>
-        </ul>
-      </div>
-    </footer>
   </main>
+  <footer class="footer" id="contacts">
+    <div class="footer__inner">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая <br>Конюшенная, д. 19</p>
+    </div>
+    <div class="footer__map">
+      <img src="img/map_desktop.jpg" alt="Расположение организации на карте" width="957" height="530">
+    </div>
+    <div class="contacts">
+      <ul>
+        <li>puteshestviemechta@gmail.ru</li>
+        <li>+7 (499) -784-684-46</li>
+      </ul>
+    </div>
+  </footer>
   <script src="js/script.min.js"></script>
 </body>
 </html>

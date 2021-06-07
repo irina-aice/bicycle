@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 874px;
+  max-width: 880px;
   min-height: 763px;
   margin: 0 auto;
 }
@@ -17,12 +17,14 @@
 
 .information__about {
   max-width: 390px;
+  margin-top: 22px;
 }
 
 @media (max-width: $width-only-tablet) {
   .information__about {
     max-width: none;
     min-height: 340px;
+    margin-top: 0;
     background-color: $pale-black;
     background-image: url("../img/main-bike-tablet.jpg");
     background-repeat: no-repeat;
@@ -48,7 +50,7 @@
 }
 
 .information__about h1 {
-  margin: 0;
+  margin: 10px 0 0 0;
   font-size: 46px;
   line-height: 64px;
   font-weight: 700;
@@ -57,6 +59,7 @@
 
 @media (max-width: $width-only-tablet) {
   .information__about h1 {
+    margin: 0;
     text-align: center;
     padding-top: 134px;
     font-size: 30px;
@@ -80,6 +83,7 @@
 
 @media (max-width: $width-only-tablet) {
   .information__about p {
+    margin-top: 20px;
     text-align: center;
     font-size: 18px;
   }
@@ -103,16 +107,18 @@
 
 .information__form {
   max-width: 327px;
+  margin-top: 14px;
 }
 
 @media (max-width: $width-only-tablet) {
   .information__form {
+    max-width: 320px;
     min-width: 321px;
     margin: 0 auto;
   }
 }
 
-@media (max-width: $width-only-tablet) {
+@media (max-width: $width-only-mobile) {
   .information__form {
     min-width: auto;
     padding-left: 16px;
@@ -135,5 +141,11 @@
     margin-bottom: 30px;
     font-size: 18px;
     color: $black;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .information__form p {
+    margin-bottom: 20px;
   }
 }

@@ -1,5 +1,19 @@
 .video {
-  background: linear-gradient(to bottom, $pale-black, $pale-black 85%, $white 85%, $white);
+  padding-top: 120px;
+  background: linear-gradient(to bottom, $pale-black, $pale-black 88%, $white 88%, $white);
+}
+
+@media (max-width: $width-only-tablet) {
+  .video {
+    padding-top: 70px;
+    background: linear-gradient(to bottom, $pale-black, $pale-black 83%, $white 83%, $white);
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .video {
+    padding-top: 84px;
+  }
 }
 
 .video__inner {
@@ -23,7 +37,6 @@
 
 .video h2 {
   margin: 0;
-  padding-top: 120px;
   text-align: center;
   font-size: 30px;
   line-height: 30px;
@@ -33,14 +46,7 @@
 
 @media (max-width: $width-only-tablet) {
   .video h2 {
-    padding-top: 70px;
     font-size: 24px;
-  }
-}
-
-@media (max-width: $width-only-mobile) {
-  .video h2 {
-    padding-top: 84px;
   }
 }
 
@@ -51,19 +57,40 @@
   color: $dark-white;
 }
 
+@media (max-width: $width-only-tablet) {
+  .video p {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: $width-only-mobile) {
   .video p {
     margin-bottom: 50px;
   }
 }
 
+.video__second-brake {
+  display: none;
+}
+
 @media (max-width: $width-only-tablet) {
-  .video br {
+  .video__first-brake {
+    display: none;
+  }
+
+  .video__second-brake {
+    display: block;
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .video__second-brake {
     display: none;
   }
 }
 
 .video img {
+  width: 100%;
   object-fit: cover;
 }
 
@@ -78,6 +105,24 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: transparent;
   border: 0;
+  padding: 0;
+  width: 65px;
+  height: 65px;
+  color: $green;
+  background-color: transparent;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: $dark-green;
+  }
+
+  &:focus {
+    outline: 1px solid $white;
+  }
+}
+
+.video button svg {
+  display: block;
 }

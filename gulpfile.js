@@ -117,7 +117,10 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'build',
+      routes: {
+        "/node_modules": "node_modules"
+      }
     },
     cors: true,
     notify: false,

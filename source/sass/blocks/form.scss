@@ -10,13 +10,32 @@
   padding-left: 30px;
   border: 1px solid $lighter-white;
   border-radius: 6px;
+
+  &::placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $grey;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba($green, 0.5);
+  }
 }
 
-.form input::placeholder {
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: 400;
-  color: $grey;
+@media (max-width: $width-only-tablet) {
+  .form input {
+    padding-top: 12px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .form input {
+    padding-left: 25px;
+  }
 }
 
 .form button {
@@ -30,4 +49,28 @@
   border: 0;
   border-radius: 6px;
   background-color: $green;
+  transform: translateY(3px);
+
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($green, 0.5);
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .form button {
+    padding-top: 16px;
+    transform: initial;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .form button {
+    padding-top: 12px;
+  }
 }

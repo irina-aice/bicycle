@@ -1,13 +1,14 @@
 @media (max-width: $width-only-tablet) {
   .nav {
-    //max-width: 320px;
-    //min-height: 568px;
     background-color: $white;
   }
 }
 
 .nav ul {
   @include reset-list;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 10px;
   max-width: 874px;
   margin: 0 auto;
   display: flex;
@@ -26,11 +27,12 @@
 }
 
 .nav li {
-  padding-bottom: 10px;
+  //padding-bottom: 10px;
 }
 
 @media (max-width: $width-only-tablet) {
   .nav li {
+    position: relative;
     width: 100%;
     margin-bottom: 30px;
     padding-top: 17px;
@@ -39,16 +41,41 @@
     font-weight: 400;
     background-color: $paler-grey;
   }
+
+  .nav li::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    top: 28px;
+    right: 18px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .nav a {
-  color: $dark-white;
+  display: block;
+  padding-top: 10px;
   padding-bottom: 10px;
+  color: $dark-white;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+
+  &:focus {
+    outline: 1px solid $white;
+  }
 }
 
 @media (max-width: $width-only-tablet) {
   .nav a {
     color: $pale-grey;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -78,7 +105,7 @@
     width: 22.5px;
     height: 1px;
     background-color: $black;
-    box-shadow: 0 5px 0 0 $black, 0 10.5px 0 0 $black;
+    box-shadow: 0 6px 0 0 $black, 0 13px 0 0 $black;
   }
 
   .nav--closed .nav__list {

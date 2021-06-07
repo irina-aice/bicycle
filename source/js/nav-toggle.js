@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
   let navOpenedClass = 'nav--opened';
   let navClosedClass = 'nav--closed';

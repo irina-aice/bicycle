@@ -1,7 +1,51 @@
 .contacts ul {
   @include reset-list;
+  max-width: 560px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 39px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: $dark-grey;
+}
+
+@media (max-width: $width-only-mobile) {
+  .contacts ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.contacts li {
+  position: relative;
+  padding-left: 41px;
+}
+
+.contacts li::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.contacts li:first-child::before {
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 20px;
+  background-image: url("../img/mail.svg");
+}
+
+.contacts li:last-child {
+  padding-right: 15px;
+}
+
+.contacts li:last-child::before {
+  top: 0;
+  left: 0;
+  width: 21.5px;
+  height: 22.62px;
+  background-image: url("../img/phone.svg");
 }
