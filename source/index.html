@@ -4,41 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Велосипеды</title>
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 
   <script type="module">
     document.documentElement.classList.remove('no-js');
     document.documentElement.classList.add('js');
   </script>
-
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("img/mobile.png");
-    }
-
-    /* Планшет */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("img/tablet.png");
-      }
-    }
-
-    /* Десктоп */
-    @media ( min-width: 1440px ) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("img/desktop.png");
-      }
-    }
-  </style>
-  <link href="/node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="/node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 <!-- page--nav-opened -->
 <body class="page">
@@ -118,16 +93,22 @@
       </ul>
     </section>
     <section class="type" id="product-type">
-      <div class="type__wrapper">
-        <div class="type__inner">
+      <div class="type__inner">
           <h2>Виды велосипедов</h2>
           <ul>
             <li>
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/road-bike-tablet.webp, img/road-bike-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/road-bike-desktop.webp, img/road-bike-desktop@2x.webp 2x">
-                <source media="(max-width: 1023px)" srcset="img/road-bike-tablet.jpg, img/road-bike-tablet@2x.jpg 2x">
-                <img src="img/road-bike-desktop.jpg" srcset="img/road-bike-desktop@2x.jpg" alt="Велосипед с корзиной у стены с вьюнком">
+                <!-- 1х: 270px; 2x: 540px -->
+                <!-- 1х: 342px; 2x: 684px -->
+                <img srcset="img/road-bike-tablet.jpg 270w,
+                            img/road-bike-tablet@2x.jpg 540w,
+                            img/road-bike-desktop.jpg 342w,
+                            img/road-bike-desktop@2x.jpg 684w"
+                      sizes="(max-width: 1023px) 270px,
+                          342px"
+                      src="img/road-bike-desktop.jpg" width="342" height="503" alt="Велосипед с корзиной у стены с вьюнком">
               </picture>
               <span>Дорожный велосипед</span>
             </li>
@@ -135,8 +116,15 @@
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountain-bike-tablet.webp, img/mountain-bike-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/mountain-bike-desktop.webp, img/mountain-bike-desktop@2x.webp 2x">
-                <source media="(max-width: 1023px)" srcset="img/mountain-bike-tablet.jpg, img/mountain-bike-tablet@2x.jpg 2x">
-                <img src="img/mountain-bike-desktop.jpg" srcset="img/mountain-bike-desktop@2x.jpg" alt="Велосипед с большим протектором на фоне гор">
+                <!-- 1х: 270px; 2x: 540px -->
+                <!-- 1х: 342px; 2x: 684px -->
+                <img srcset="img/mountain-bike-tablet.jpg 270w,
+                            img/mountain-bike-tablet@2x.jpg 540w,
+                            img/mountain-bike-desktop.jpg 342w,
+                            img/mountain-bike-desktop@2x.jpg 684w"
+                      sizes="(max-width: 1023px) 270px,
+                          342px"
+                      src="img/mountain-bike-desktop.jpg" width="342" height="566" alt="Велосипед с большим протектором на фоне гор">
               </picture>
               <span>Горный велосипед</span>
             </li>
@@ -144,14 +132,20 @@
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/children-bike-tablet.webp, img/children-bike-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/children-bike-desktop.webp, img/children-bike-desktop@2x.webp 2x">
-                <source media="(max-width: 1023px)" srcset="img/children-bike-tablet.jpg, img/children-bike-tablet@2x.jpg 2x">
-                <img src="img/children-bike-desktop.jpg" srcset="img/children-bike-desktop@2x.jpg" alt="Детский розовый велосипед на фоне стены">
+                <!-- 1х: 270px; 2x: 540px -->
+                <!-- 1х: 342px; 2x: 684px -->
+                <img srcset="img/children-bike-tablet.jpg 270w,
+                            img/children-bike-tablet@2x.jpg 540w,
+                            img/children-bike-desktop.jpg 342w,
+                            img/children-bike-desktop@2x.jpg 684w"
+                      sizes="(max-width: 1023px) 270px,
+                          342px"
+                      src="img/children-bike-desktop.jpg" width="342" height="513" alt="Детский розовый велосипед на фоне стены">
               </picture>
               <span>Детский велосипед</span>
             </li>
           </ul>
         </div>
-      </div>
     </section>
     <section class="video" id="video">
       <div class="video__inner">
@@ -161,11 +155,13 @@
             <br class="video__second-brake">выбора велосипеда для себя.</p>
         </div>
         <div class="video__item">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/video-bike-mobile.jpg">
-            <source media="(max-width: 1023px)" srcset="img/video-bike-tablet.jpg">
-            <img src="img/video-bike-desktop.jpg" width="929" height="522" alt="Спортивный черный велосипед на черном фоне">
-          </picture>
+          <img srcset="img/video-bike-mobile.jpg 288w,
+                        img/video-bike-tablet.jpg 503w,
+                        img/video-bike-desktop.jpg 929w"
+                sizes="(max-width: 767px) 288px,
+                      (max-width: 1023px) 503px,
+                      929px"
+                src="img/video-bike-desktop.jpg" width="929" height="522" alt="Спортивный черный велосипед на черном фоне">
           <button type="button" aria-label="Смотреть">
             <svg width="65" height="65">
               <use xlink:href="img/sprite.svg#play"></use>
@@ -181,7 +177,13 @@
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая <br>Конюшенная, д. 19</p>
     </div>
     <div class="footer__map">
-      <img src="img/map_desktop.jpg" alt="Расположение организации на карте" width="957" height="530">
+      <img srcset="img/map-mobile.jpg 319w,
+                    img/map-tablet.jpg 698w,
+                    img/map-desktop.jpg 957w"
+            sizes="(max-width: 767px) 319px,
+                    (max-width: 1023px) 698px,
+                    957px"
+            src="img/map-desktop.jpg" width="957" height="530" alt="Расположение организации на карте">
     </div>
     <div class="contacts">
       <ul>
@@ -190,6 +192,6 @@
       </ul>
     </div>
   </footer>
-  <script src="js/script.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>

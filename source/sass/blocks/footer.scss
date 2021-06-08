@@ -5,9 +5,15 @@
 }
 
 @media (max-width: $width-only-mobile) {
+  .footer {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
   .footer__inner {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -52,7 +58,7 @@
 
 @media (max-width: $width-only-mobile) {
   .footer p {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
 }
 
