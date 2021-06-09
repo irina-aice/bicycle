@@ -16,7 +16,6 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  color: $dark-grey;
 }
 
 @media (max-width: $width-only-tablet) {
@@ -90,5 +89,18 @@
 @media (max-width: $width-only-mobile) {
   .contacts li:last-child::before {
     left: 36px;
+  }
+}
+
+.contacts a {
+  color: $dark-grey;
+
+  &:focus,
+  &:hover {
+    color: $black;
+  }
+
+  &:focus {
+    outline: 1px solid $black;
   }
 }
