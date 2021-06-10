@@ -4,6 +4,8 @@ html {
 
 body {
   min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
