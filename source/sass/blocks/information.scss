@@ -114,13 +114,14 @@
   .information__form {
     max-width: 320px;
     min-width: 321px;
-    margin: 0 auto;
+    margin: 70px auto 0 auto;
   }
 }
 
 @media (max-width: $width-only-mobile) {
   .information__form {
     min-width: auto;
+    max-width: none;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -137,7 +138,6 @@
 
 @media (max-width: $width-only-tablet) {
   .information__form p {
-    margin-top: 70px;
     margin-bottom: 30px;
     font-size: 18px;
     color: $black;

@@ -9,8 +9,9 @@
   @include reset-list;
   max-width: 560px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 39px;
+  margin-top: 23px;
   margin-left: auto;
   margin-right: auto;
   font-size: 16px;
@@ -20,7 +21,7 @@
 
 @media (max-width: $width-only-tablet) {
   .contacts ul {
-    margin-top: 22px;
+    margin-top: 6px;
   }
 }
 
@@ -33,13 +34,15 @@
 }
 
 .contacts li {
-  position: relative;
-  padding-left: 41px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
 }
 
 @media (max-width: $width-only-mobile) {
-  .contacts li {
-    padding-left: 43px;
+  .contacts li:first-child {
+    margin-top: 0;
   }
 
   .contacts li + li {
@@ -49,22 +52,15 @@
 
 .contacts li::before {
   content: "";
-  position: absolute;
+  display: inline-block;
+  margin-right: 15px;
   background-repeat: no-repeat;
 }
 
 .contacts li:first-child::before {
-  top: 0;
-  left: 0;
   width: 26px;
   height: 20px;
   background-image: url("../img/mail.svg");
-}
-
-@media (max-width: $width-only-mobile) {
-  .contacts li:first-child::before {
-    left: 8px;
-  }
 }
 
 .contacts li:last-child {
@@ -72,24 +68,9 @@
 }
 
 .contacts li:last-child::before {
-  top: 0;
-  left: 0;
   width: 21.5px;
   height: 22.62px;
   background-image: url("../img/phone.svg");
-}
-
-@media (max-width: $width-only-tablet) {
-  .contacts li:last-child::before {
-    top: -2px;
-    left: 6px;
-  }
-}
-
-@media (max-width: $width-only-mobile) {
-  .contacts li:last-child::before {
-    left: 36px;
-  }
 }
 
 .contacts a {

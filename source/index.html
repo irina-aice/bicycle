@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Велосипеды</title>
+  <meta name="description" content="Велосипеды">
   <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
@@ -43,7 +44,7 @@
       </header>
       <section class="information">
         <div class="information__about">
-          <a class="logo">
+          <a class="logo" href="/">
             <svg width="68" height="21">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
@@ -158,8 +159,8 @@
           <img srcset="img/video-bike-mobile.jpg 288w,
                         img/video-bike-tablet.jpg 503w,
                         img/video-bike-desktop.jpg 929w"
-                sizes="(max-width: 767px) 288px,
-                      (max-width: 1023px) 503px,
+                sizes="(max-width: 767px) 100vw,
+                      (max-width: 1023px) calc(929px - 265px),
                       929px"
                 src="img/video-bike-desktop.jpg" width="929" height="522" alt="Спортивный черный велосипед на черном фоне">
           <button type="button" aria-label="Смотреть">
@@ -177,13 +178,11 @@
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая <br>Конюшенная, д. 19</p>
     </div>
     <div class="footer__map">
-      <img srcset="img/map-mobile.jpg 319w,
-                    img/map-tablet.jpg 698w,
-                    img/map-desktop.jpg 957w"
-            sizes="(max-width: 767px) 319px,
-                    (max-width: 1023px) 698px,
-                    957px"
-            src="img/map-desktop.jpg" width="957" height="530" alt="Расположение организации на карте">
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/map-mobile.jpg">
+        <source media="(max-width: 1023px)" srcset="img/map-tablet.jpg">
+        <img src="img/map-desktop.jpg" width="957" height="530" alt="Расположение организации на карте">
+      </picture>
     </div>
     <div class="contacts">
       <ul>
